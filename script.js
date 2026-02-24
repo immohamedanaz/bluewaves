@@ -91,9 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = true;
             }
 
-            fetch(form.action, {
+            const formData = new FormData(form);
+            formData.append('_captcha', 'false');
+            const actionUrl = form.action.includes('/ajax/') ? form.action : form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+            fetch(actionUrl, {
                 method: form.method,
-                body: new FormData(form),
+                body: formData,
                 headers: { 'Accept': 'application/json' }
             }).then(response => {
                 form.style.display = 'none';
@@ -187,10 +191,13 @@ function submitTourModal(e) {
     const successMsg = document.getElementById('tour-modal-success');
     if (successMsg) successMsg.classList.remove('hidden');
 
-    // We can also submit the data in the background if needed
-    fetch(form.action, {
+    const formData = new FormData(form);
+    formData.append('_captcha', 'false');
+    const actionUrl = form.action.includes('/ajax/') ? form.action : form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+    fetch(actionUrl, {
         method: form.method,
-        body: new FormData(form),
+        body: formData,
         headers: { 'Accept': 'application/json' }
     }).then(response => {
         console.log("Tour request submitted.");
