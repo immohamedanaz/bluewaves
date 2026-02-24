@@ -92,13 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new FormData(form);
-            formData.append('_captcha', 'false');
-            const actionUrl = form.action.includes('/ajax/') ? form.action : form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+            const data = Object.fromEntries(formData.entries());
+            data._captcha = 'false';
+
+            // Hardcode actionUrl to include both emails separated by comma to ensure both receive the email via AJAX
+            const actionUrl = 'https://formsubmit.co/ajax/imfaizalanas@gmail.com,anasimani01@gmail.com';
 
             fetch(actionUrl, {
-                method: form.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
             }).then(response => {
                 form.style.display = 'none';
 
@@ -192,13 +198,18 @@ function submitTourModal(e) {
     if (successMsg) successMsg.classList.remove('hidden');
 
     const formData = new FormData(form);
-    formData.append('_captcha', 'false');
-    const actionUrl = form.action.includes('/ajax/') ? form.action : form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+    const data = Object.fromEntries(formData.entries());
+    data._captcha = 'false';
+
+    const actionUrl = 'https://formsubmit.co/ajax/imfaizalanas@gmail.com,anasimani01@gmail.com';
 
     fetch(actionUrl, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
     }).then(response => {
         console.log("Tour request submitted.");
     }).catch(error => {
