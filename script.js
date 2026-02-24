@@ -80,30 +80,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmationMsg = document.getElementById('booking-confirmation');
 
     if (taxiForm) {
-        taxiForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // FormSubmit handles the submission logic on its own server.
+        // Allowing the native HTML submittion allows the user to click the activation email.
+    }
 
-            const formData = new FormData(taxiForm);
+    // Vehicle max passengers validation
+    const vehicleSelect = document.getElementById('vehicle');
+    const passengersInput = document.getElementById('passengers');
 
-            fetch(taxiForm.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    confirmationMsg.classList.remove('hidden');
-                    setTimeout(() => {
-                        taxiForm.reset();
-                        confirmationMsg.classList.add('hidden');
-                    }, 5000);
-                } else {
-                    alert("Oops! There was a problem submitting your form");
-                }
-            }).catch(error => {
-                alert("Error sending booking form.");
-            });
+    if (vehicleSelect && passengersInput) {
+        vehicleSelect.addEventListener('change', function () {
+            let maxPax = 15;
+            switch (this.value) {
+                case 'Car':
+                    maxPax = 3;
+                    break;
+                case 'Van':
+                    maxPax = 9;
+                    break;
+                case 'Luxury':
+                    maxPax = 3;
+                    break;
+                case 'Tuk Tuk':
+                    maxPax = 2;
+                    break;
+            }
+            passengersInput.max = maxPax;
+            passengersInput.placeholder = 'Max ' + maxPax + ' pax';
+            // Automatically lower the value if it exceeds the new max
+            if (parseInt(passengersInput.value) > maxPax) {
+                passengersInput.value = maxPax;
+            }
         });
     }
 
@@ -115,4 +122,84 @@ document.addEventListener('DOMContentLoaded', () => {
             parallax.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
         }
     });
+
+    // 3D Coverflow Gallery
+    const track = document.querySelector('.coverflow-track');
+    const nextButton = document.querySelector('.next-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const thumbsNav = document.querySelector('.coverflow-thumbs');
+
+    if (track && nextButton && prevButton && thumbsNav) {
+        const slides = Array.from(track.querySelectorAll('.coverflow-slide'));
+        const thumbs = Array.from(thumbsNav.querySelectorAll('.thumb'));
+
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        const updateCoverflow = () => {
+            // Remove all classes
+            slides.forEach(slide => {
+                slide.className = 'coverflow-slide hidden';
+            });
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+
+            // Calculate indices
+            const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+            const nextIndex = (currentIndex + 1) % slides.length;
+            const prevHiddenIndex = (currentIndex - 2 + slides.length) % slides.length;
+            const nextHiddenIndex = (currentIndex + 2) % slides.length;
+
+            // Apply classes
+            slides[currentIndex].className = 'coverflow-slide active';
+            slides[prevIndex].className = 'coverflow-slide prev';
+            slides[nextIndex].className = 'coverflow-slide next';
+
+            if (slides.length > 3) {
+                slides[prevHiddenIndex].className = 'coverflow-slide prev-hidden';
+                slides[nextHiddenIndex].className = 'coverflow-slide next-hidden';
+            }
+
+            // Update thumbs
+            thumbs[currentIndex].classList.add('active');
+
+            // Scroll thumbs container to keep active thumb in view
+            const activeThumb = thumbs[currentIndex];
+            thumbsNav.scrollTo({
+                left: activeThumb.offsetLeft - (thumbsNav.offsetWidth / 2) + (activeThumb.offsetWidth / 2),
+                behavior: 'smooth'
+            });
+        };
+
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCoverflow();
+            resetAutoPlay();
+        };
+
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCoverflow();
+            resetAutoPlay();
+        };
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        thumbs.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => {
+                currentIndex = index;
+                updateCoverflow();
+                resetAutoPlay();
+            });
+        });
+
+        const resetAutoPlay = () => {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        };
+
+        // Initialize
+        updateCoverflow();
+        resetAutoPlay();
+    }
 });

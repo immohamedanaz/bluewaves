@@ -27,7 +27,7 @@
             <nav class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#tours">Tours</a>
+                <a href="#book-taxi">Tours</a>
                 <a href="#destinations">Destinations</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
@@ -46,7 +46,7 @@
             <h1 class="hero-title">Discover Sri Lanka with Comfort & Care</h1>
             <p class="hero-subtitle">Premium hospitality, breathtaking destinations, and reliable taxi services.</p>
             <div class="hero-buttons">
-                <a href="#tours" class="btn btn-primary btn-large">Explore Tours</a>
+                <a href="#book-taxi" class="btn btn-primary btn-large">Explore Tours</a>
                 <a href="#book-taxi" class="btn btn-outline btn-large">Book a Taxi</a>
             </div>
         </div>
@@ -93,7 +93,8 @@
                     <div class="card-content">
                         <h3>Sigiriya</h3>
                         <p>The ancient rock fortress and palace ruin, offering breathtaking views.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="sigiriya-tour.html" class="btn btn-text">View Tour <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Card 2 -->
@@ -105,7 +106,7 @@
                     <div class="card-content">
                         <h3>Kandy</h3>
                         <p>The cultural capital, home to the Temple of the Sacred Tooth Relic.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="kandy-tour.html" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Card 3 -->
@@ -117,7 +118,7 @@
                     <div class="card-content">
                         <h3>Ella</h3>
                         <p>Lush green hills, tea plantations, and the famous Nine Arch Bridge.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="ella-tour.html" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Card 4 -->
@@ -129,7 +130,7 @@
                     <div class="card-content">
                         <h3>Galle</h3>
                         <p>Historic Dutch Fort with charming streets and stunning ocean views.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="galle-tour.html" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Card 5 -->
@@ -141,7 +142,7 @@
                     <div class="card-content">
                         <h3>Yala</h3>
                         <p>Wildlife sanctuary famous for leopards, elephants, and coastal beauty.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="yala-tour.html" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Card 6 -->
@@ -153,7 +154,22 @@
                     <div class="card-content">
                         <h3>Mirissa</h3>
                         <p>Beautiful beaches, vibrant nightlife, and whale watching experiences.</p>
-                        <a href="#tours" class="btn btn-text">View Tour <i class="fas fa-arrow-right"></i></a>
+                        <a href="mirissa-tour.html" class="btn btn-text">View Tour <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 0 - Colombo City Tour -->
+                <div class="card reveal fade-bottom delay-1">
+                    <div class="card-img-wrapper">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Skyline_Jan_2022.jpg?width=900"
+                            alt="Colombo City Tour" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Colombo City Tour</h3>
+                        <p>Experience the vibrant heart of Sri Lanka, blending rich cultural heritage with modern
+                            skyline views.</p>
+                        <a href="colombo-city-tour.html" class="btn btn-text">View Tour <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -179,12 +195,45 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="pickup">Pickup Location</label>
-                            <input type="text" id="pickup" name="Pickup Location" required
-                                placeholder="Bandaranaike Intl Airport">
+                            <select id="pickup" name="Pickup Location" required>
+                                <option value="" disabled selected>Select Pickup Location</option>
+                                <option value="Bandaranaike Intl Airport">Bandaranaike Intl Airport</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Kandy">Kandy</option>
+                                <option value="Galle">Galle</option>
+                                <option value="Ella">Ella</option>
+                                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                                <option value="Mirissa">Mirissa</option>
+                                <option value="Sigiriya">Sigiriya</option>
+                                <option value="Trincomalee">Trincomalee</option>
+                                <option value="Yala">Yala</option>
+                                <option value="Anuradhapura">Anuradhapura</option>
+                                <option value="Polonnaruwa">Polonnaruwa</option>
+                                <option value="Jaffna">Jaffna</option>
+                                <option value="Dambulla">Dambulla</option>
+                                <option value="Negombo">Negombo</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="drop">Drop Location</label>
-                            <input type="text" id="drop" name="Drop Location" required placeholder="Colombo / Kandy">
+                            <select id="drop" name="Drop Location" required>
+                                <option value="" disabled selected>Select Drop Location</option>
+                                <option value="Bandaranaike Intl Airport">Bandaranaike Intl Airport</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Kandy">Kandy</option>
+                                <option value="Galle">Galle</option>
+                                <option value="Ella">Ella</option>
+                                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                                <option value="Mirissa">Mirissa</option>
+                                <option value="Sigiriya">Sigiriya</option>
+                                <option value="Trincomalee">Trincomalee</option>
+                                <option value="Yala">Yala</option>
+                                <option value="Anuradhapura">Anuradhapura</option>
+                                <option value="Polonnaruwa">Polonnaruwa</option>
+                                <option value="Jaffna">Jaffna</option>
+                                <option value="Dambulla">Dambulla</option>
+                                <option value="Negombo">Negombo</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
@@ -214,8 +263,6 @@
                                 placeholder="2">
                         </div>
                     </div>
-                    <input type="hidden" name="_next" value="http://localhost:3000">
-                    <input type="hidden" name="_captcha" value="false">
                     <button type="submit" class="btn btn-primary btn-full">Book Now</button>
                     <div id="booking-confirmation" class="hidden success-message">
                         <i class="fas fa-check-circle"></i> Booking request sent successfully! We will contact you soon.
@@ -226,65 +273,91 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="section">
+    <section id="gallery" class="section bg-light-blue">
         <div class="container">
             <div class="section-header reveal fade-bottom">
                 <h2 class="section-title">Gallery</h2>
                 <p>Moments from our journeys across Sri Lanka</p>
             </div>
-            <div class="gallery-masonry reveal fade-bottom">
-                <div class="gallery-item"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/SL_Anuradhapura_asv2020-01_img11_Ruwanwelisaya_Stupa.jpg/960px-SL_Anuradhapura_asv2020-01_img11_Ruwanwelisaya_Stupa.jpg"
-                        alt="Anuradhapura"></div>
-                <div class="gallery-item row-span-2"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg/960px-SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg"
-                        alt="Temple of the Tooth"></div>
-                <div class="gallery-item"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Polonnaruwa.jpg/960px-Polonnaruwa.jpg"
-                        alt="Polonnaruwa"></div>
-                <div class="gallery-item"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dambulla-buddhastupa.jpg/960px-Dambulla-buddhastupa.jpg"
-                        alt="Dambulla"></div>
-                <div class="gallery-item row-span-2"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Srilankamountainforest.jpg/960px-Srilankamountainforest.jpg"
-                        alt="Horton Plains"></div>
-                <div class="gallery-item"><img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pinnawala_01.jpg/960px-Pinnawala_01.jpg"
-                        alt="Pinnawala Elephant Orphanage"></div>
+
+            <div class="gallery-coverflow reveal fade-bottom">
+                <div class="coverflow-container">
+                    <div class="coverflow-track">
+                        <div class="coverflow-slide"><img src="Gallery_1.jpg" alt="Gallery 1"></div>
+                        <div class="coverflow-slide"><img src="Gallery_2.jpg" alt="Gallery 2"></div>
+                        <div class="coverflow-slide"><img src="Gallery_3.jpg" alt="Gallery 3"></div>
+                        <div class="coverflow-slide"><img src="Gallery_4.jpg" alt="Gallery 4"></div>
+                        <div class="coverflow-slide"><img src="Gallery_5.jpg" alt="Gallery 5"></div>
+                        <div class="coverflow-slide"><img src="Gallery_6.jpg" alt="Gallery 6"></div>
+                        <div class="coverflow-slide"><img src="Gallery_7.jpg" alt="Gallery 7"></div>
+                        <div class="coverflow-slide"><img src="Gallery_8.jpg" alt="Gallery 8"></div>
+                        <div class="coverflow-slide"><img src="Gallery_9.jpg" alt="Gallery 9"></div>
+                    </div>
+                    <button class="coverflow-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="coverflow-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="coverflow-thumbs">
+                    <div class="thumb"><img src="Gallery_1.jpg" alt="Thumb 1"></div>
+                    <div class="thumb"><img src="Gallery_2.jpg" alt="Thumb 2"></div>
+                    <div class="thumb"><img src="Gallery_3.jpg" alt="Thumb 3"></div>
+                    <div class="thumb"><img src="Gallery_4.jpg" alt="Thumb 4"></div>
+                    <div class="thumb"><img src="Gallery_5.jpg" alt="Thumb 5"></div>
+                    <div class="thumb"><img src="Gallery_6.jpg" alt="Thumb 6"></div>
+                    <div class="thumb"><img src="Gallery_7.jpg" alt="Thumb 7"></div>
+                    <div class="thumb"><img src="Gallery_8.jpg" alt="Thumb 8"></div>
+                    <div class="thumb"><img src="Gallery_9.jpg" alt="Thumb 9"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer & Contact -->
-    <footer id="contact" class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#home" class="logo">
-                    <img src="logo.png" alt="BlueWaves Logo" class="brand-logo">
-                </a>
-                <p>Premium travel and taxi services across beautiful Sri Lanka.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+    <footer id="contact" class="footer-new">
+        <div class="footer-scenic">
+            <div class="scenic-overlay"></div>
+        </div>
+        <div class="footer-content">
+            <div class="container footer-new-container">
+                <h2 class="footer-headline">Explore the beauty<br>of Sri Lanka</h2>
+
+                <div class="footer-links-wrapper">
+                    <ul class="footer-links-col">
+                        <li><span class="link-pipe">|</span><a href="#home">Home</a></li>
+                        <li><span class="link-pipe">|</span><a href="#contact">Contact us</a></li>
+                    </ul>
+                    <ul class="footer-links-col">
+                        <li><span class="link-pipe">|</span><a href="colombo-city-tour.html">City Tours</a></li>
+                        <li><span class="link-pipe">|</span><a href="#">Privacy policy</a></li>
+                    </ul>
+                    <ul class="footer-links-col">
+                        <li><span class="link-pipe">|</span><a href="#about">Our mission</a></li>
+                        <li><span class="link-pipe">|</span><a href="#gallery">Gallery</a></li>
+                    </ul>
+                    <div class="footer-action">
+                        <a href="#book-taxi" class="btn btn-contact-new">CONTACT US</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-grid">
+                    <div class="footer-brand-info">
+                        <img src="logo.png" alt="BlueWaves Logo" class="footer-logo-new">
+                        <p class="copyright-text">Copyright &copy; 2026<br><span class="small-text">Premium Travel. Best
+                                Services.</span></p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <div class="footer-divider"></div>
+                        <div class="footer-socials">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/bluewavestoutism?igsh=czFna21mNm96cXQ1"
+                                target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1CCptfN8FA/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
-                <p><i class="fas fa-phone-alt"></i> +94 729088087</p>
-                <p><i class="fas fa-envelope"></i> bluewavestravelstourism01@gmail.com</p>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Newsletter</h3>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email" required>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Bluewaves Travel & Taxi. All rights reserved.</p>
         </div>
     </footer>
 
