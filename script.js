@@ -75,44 +75,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Taxi Form Submission
-    const taxiForm = document.getElementById('taxi-form');
-    const confirmationMsg = document.getElementById('booking-confirmation');
+    // Generic Taxi Form Submission for all pages
+    const allTaxiForms = document.querySelectorAll('.taxi-form');
 
-    if (taxiForm) {
-        // FormSubmit handles the submission logic on its own server.
-        // Allowing the native HTML submittion allows the user to click the activation email.
-    }
+    allTaxiForms.forEach(form => {
+        if (form.id === 'explore-tours-form') return; // Handled separately
 
-    // Vehicle max passengers validation
-    const vehicleSelect = document.getElementById('vehicle');
-    const passengersInput = document.getElementById('passengers');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    if (vehicleSelect && passengersInput) {
-        vehicleSelect.addEventListener('change', function () {
-            let maxPax = 15;
-            switch (this.value) {
-                case 'Car':
-                    maxPax = 3;
-                    break;
-                case 'Van':
-                    maxPax = 9;
-                    break;
-                case 'Luxury':
-                    maxPax = 3;
-                    break;
-                case 'Tuk Tuk':
-                    maxPax = 2;
-                    break;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.innerText : 'Book Now';
+            if (submitBtn) {
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
             }
-            passengersInput.max = maxPax;
-            passengersInput.placeholder = 'Max ' + maxPax + ' pax';
-            // Automatically lower the value if it exceeds the new max
-            if (parseInt(passengersInput.value) > maxPax) {
-                passengersInput.value = maxPax;
-            }
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                form.style.display = 'none';
+
+                let confirmationMsg = document.getElementById('booking-confirmation');
+
+                // If it's a specific form without an ID (like tour pages), create a message dynamically
+                if (form.id !== 'taxi-form') {
+                    confirmationMsg = document.createElement('div');
+                    confirmationMsg.className = 'wave-success';
+                    confirmationMsg.innerHTML = '<i class="fas fa-check-circle" style="color: #0eccaa;"></i> Thanks! Your booking request has been submitted. We will contact you soon.';
+                    confirmationMsg.style.marginTop = '1rem';
+                    confirmationMsg.style.padding = '1rem';
+                    confirmationMsg.style.background = 'rgba(14, 204, 170, 0.1)';
+                    confirmationMsg.style.color = '#0eccaa';
+                    confirmationMsg.style.borderRadius = '8px';
+                    confirmationMsg.style.textAlign = 'center';
+                    form.parentNode.appendChild(confirmationMsg);
+                }
+
+                if (confirmationMsg) {
+                    confirmationMsg.classList.remove('hidden');
+                    confirmationMsg.style.display = 'block';
+                }
+            }).catch(error => {
+                console.error("Error submitting request.", error);
+                if (submitBtn) {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
+                alert("There was an error submitting your try. Please try again later.");
+            });
         });
-    }
+    });
+
+
 
     // Parallax effect for Hero
     window.addEventListener('scroll', () => {
@@ -181,3 +198,33 @@ function submitTourModal(e) {
         console.error("Error submitting tour request.", error);
     });
 }
+
+function openImageModal(imgSrc) {
+    const modal = document.getElementById('imageModal');
+    const fullImg = document.getElementById('fullImage');
+    if (modal && fullImg) {
+        fullImg.src = imgSrc;
+        modal.classList.remove('hidden');
+    }
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Attach click listeners to all gallery cards
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    galleryCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function (e) {
+            const img = this.querySelector('img');
+            if (img && img.src) {
+                openImageModal(img.src);
+            }
+        });
+    });
+});

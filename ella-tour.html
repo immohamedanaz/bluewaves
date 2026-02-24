@@ -160,18 +160,19 @@
                     <div class="form-group" style="margin-bottom: 1.5rem;">
                         <label for="package" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Select
                             Tour Package</label>
-                        <select id="package" name="Tour Package"
+                        <input list="ella-package-options" id="package" name="Tour Package"
+                            placeholder="Type or choose a package..."
                             style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
-                            <option value="" disabled selected>Choose a package...</option>
-                            <option value="Colombo City Tour">Colombo City Tour</option>
-                            <option value="Ella - Scenic">Ella - Scenic</option>
-                            <option value="Galle - Heritage">Galle - Heritage</option>
-                            <option value="Kandy - Cultural">Kandy - Cultural</option>
-                            <option value="Mirissa - Breezy">Mirissa - Breezy</option>
-                            <option value="Sigiriya - Ancient">Sigiriya - Ancient</option>
-                            <option value="Trincomalee">Trincomalee</option>
-                            <option value="Yala - Wild">Yala - Wild</option>
-                        </select>
+                        <datalist id="ella-package-options">
+                            <option value="Colombo City Tour">
+                            <option value="Ella - Scenic">
+                            <option value="Galle - Heritage">
+                            <option value="Kandy - Cultural">
+                            <option value="Mirissa - Breezy">
+                            <option value="Sigiriya - Ancient">
+                            <option value="Trincomalee">
+                            <option value="Yala - Wild">
+                        </datalist>
                     </div>
                     <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
                         <div class="form-group" style="flex: 1; min-width: 200px;">
@@ -187,6 +188,13 @@
                             <input type="number" id="days" name="Number of Days" min="1" max="30"
                                 style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
                                 placeholder="Ex: 3" required>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="passengers"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Passenger Count</label>
+                            <input type="number" id="passengers" name="Passenger Count" min="1"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                                placeholder="Ex: 2" required>
                         </div>
                     </div>
                     <div class="form-group" style="margin-bottom: 2rem;">
