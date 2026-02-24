@@ -122,5 +122,62 @@ document.addEventListener('DOMContentLoaded', () => {
             parallax.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
         }
     });
+    // Wave Ripple Effect
+    const waveBtns = document.querySelectorAll('.btn, .wave-btn');
+    waveBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            let ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
 
+            let x = e.clientX - e.target.getBoundingClientRect().left;
+            let y = e.clientY - e.target.getBoundingClientRect().top;
+
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
 });
+
+// Global Modal Functions
+function openTourModal(e) {
+    if (e) e.preventDefault();
+    document.getElementById('tourModal').classList.remove('hidden');
+}
+
+function closeTourModal() {
+    document.getElementById('tourModal').classList.add('hidden');
+    // reset form inside if needed
+    const form = document.getElementById('explore-tours-form');
+    if (form) form.reset();
+    const successMsg = document.getElementById('tour-modal-success');
+    if (successMsg) successMsg.classList.add('hidden');
+    if (form) form.style.display = 'block';
+}
+
+function submitTourModal(e) {
+    // FormSubmit takes over native form submission unless we stop it, 
+    // but the user wanted a custom wave message.
+    e.preventDefault();
+
+    const form = e.target;
+    // Hide form, show wave success text
+    form.style.display = 'none';
+    const successMsg = document.getElementById('tour-modal-success');
+    if (successMsg) successMsg.classList.remove('hidden');
+
+    // We can also submit the data in the background if needed
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        console.log("Tour request submitted.");
+    }).catch(error => {
+        console.error("Error submitting tour request.", error);
+    });
+}

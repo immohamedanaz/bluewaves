@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,25 +40,25 @@
                 <a href="#about">About</a>
                 <a href="#book-taxi">Tours</a>
                 <a href="#destinations">Destinations</a>
-                <a href="#gallery">Gallery</a>
+                <a href="#gallery">Journey Highlights</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="header-actions">
-                <a href="#book-taxi" class="btn btn-primary sticky-book-btn">Book Taxi</a>
+                <a href="#book-taxi" class="btn btn-primary sticky-book-btn">Book a Taxi</a>
                 <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero parallax">
+    <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content reveal fade-bottom">
             <h1 class="hero-title">Discover Sri Lanka with Comfort & Care</h1>
             <p class="hero-subtitle">Premium hospitality, breathtaking destinations, and reliable taxi services.</p>
             <div class="hero-buttons">
-                <a href="#book-taxi" class="btn btn-primary btn-large">Explore Tours</a>
-                <a href="#book-taxi" class="btn btn-outline btn-large">Book a Taxi</a>
+                <a href="#" class="btn btn-primary btn-hero wave-btn" onclick="openTourModal(event)">Book a Tour</a>
+                <a href="#book-taxi" class="btn btn-outline btn-hero wave-btn">Book a Taxi</a>
             </div>
         </div>
         <!-- Animated Waves -->
@@ -70,151 +70,12 @@
                         d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
                 <g class="parallax-waves">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(144, 224, 239, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(144, 224, 239, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(144, 224, 239, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fdfaf7" />
                 </g>
             </svg>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section bg-sand">
-        <div class="container about-grid reveal fade-left">
-            <div class="about-text">
-                <h2 class="section-title">Experience True Sri Lankan Hospitality</h2>
-                <p>Welcome to Bluewaves, your trusted travel partner in Sri Lanka. We offer personalized tours and
-                    reliable taxi services to ensure your journey is safe, comfortable, and unforgettable.</p>
-                <div class="stats-counter">
-                    <div class="stat-item">
-                        <span class="counter" data-target="500">0</span>+
-                        <p>Happy Tourists</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="counter" data-target="50">0</span>+
-                        <p>Destinations</p>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image reveal fade-right">
-                <img src="Aboutus.png" alt="About Us" class="rounded-img shadow-lg">
-            </div>
-        </div>
-    </section>
-
-    <!-- Destinations Section -->
-    <section id="destinations" class="section" style="background-color: #fdfaf7;">
-        <div class="container">
-            <div class="section-header text-center reveal fade-bottom" style="margin-bottom: 3rem;">
-                <h2 class="section-title" style="color: #2d3748; font-size: 2.5rem; margin-bottom: 1rem;">Popular Tour
-                    Packages</h2>
-                <p style="color: #718096; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.6;">
-                    Handpicked travel experiences covering Sri Lanka’s top destinations, perfect for families, couples,
-                    and solo travelers.</p>
-            </div>
-            <div class="swiper destinations-slider" style="padding: 2rem 1rem;">
-                <div class="swiper-wrapper">
-                    <!-- Card 1 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-1">
-                        <a href="sigiriya-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/960px-Sigiriya_%28141688197%29.jpeg"
-                                    alt="Sigiriya" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Sigiriya – Ancient</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-2">
-                        <a href="kandy-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg/960px-SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg"
-                                    alt="Kandy" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Kandy – Cultural</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-3">
-                        <a href="ella-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Nine_Arches_Bridge.jpg/960px-The_Nine_Arches_Bridge.jpg"
-                                    alt="Ella" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Ella – Scenic</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-1">
-                        <a href="galle-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/960px-Galle_Fort.jpg"
-                                    alt="Galle" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Galle – Heritage</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 5 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-2">
-                        <a href="yala-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yala_Beach.jpg/960px-Yala_Beach.jpg"
-                                    alt="Yala" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Yala – Wild</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 6 -->
-                    <div class="swiper-slide card reveal fade-bottom delay-3">
-                        <a href="mirissa-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mirissa-Plage_%283%29.jpg/960px-Mirissa-Plage_%283%29.jpg"
-                                    alt="Mirissa" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Mirissa – Breezy</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 0 - Colombo City Tour -->
-                    <div class="swiper-slide card reveal fade-bottom delay-1">
-                        <a href="colombo-city-tour.html" style="text-decoration: none;">
-                            <div class="card-img-wrapper">
-                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Skyline_Jan_2022.jpg?width=900"
-                                    alt="Colombo City Tour" class="card-img">
-                            </div>
-                            <div class="card-content">
-                                <div class="package-card-header" style="margin-bottom: 0;">
-                                    <h3>Colombo – Urban</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -238,45 +99,13 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="pickup">Pickup Location</label>
-                            <select id="pickup" name="Pickup Location" required>
-                                <option value="" disabled selected>Select Pickup Location</option>
-                                <option value="Bandaranaike Intl Airport">Bandaranaike Intl Airport</option>
-                                <option value="Colombo">Colombo</option>
-                                <option value="Kandy">Kandy</option>
-                                <option value="Galle">Galle</option>
-                                <option value="Ella">Ella</option>
-                                <option value="Nuwara Eliya">Nuwara Eliya</option>
-                                <option value="Mirissa">Mirissa</option>
-                                <option value="Sigiriya">Sigiriya</option>
-                                <option value="Trincomalee">Trincomalee</option>
-                                <option value="Yala">Yala</option>
-                                <option value="Anuradhapura">Anuradhapura</option>
-                                <option value="Polonnaruwa">Polonnaruwa</option>
-                                <option value="Jaffna">Jaffna</option>
-                                <option value="Dambulla">Dambulla</option>
-                                <option value="Negombo">Negombo</option>
-                            </select>
+                            <input type="text" id="pickup" name="Pickup Location"
+                                placeholder="Type pickup city or location" required>
                         </div>
                         <div class="form-group">
                             <label for="drop">Drop Location</label>
-                            <select id="drop" name="Drop Location" required>
-                                <option value="" disabled selected>Select Drop Location</option>
-                                <option value="Bandaranaike Intl Airport">Bandaranaike Intl Airport</option>
-                                <option value="Colombo">Colombo</option>
-                                <option value="Kandy">Kandy</option>
-                                <option value="Galle">Galle</option>
-                                <option value="Ella">Ella</option>
-                                <option value="Nuwara Eliya">Nuwara Eliya</option>
-                                <option value="Mirissa">Mirissa</option>
-                                <option value="Sigiriya">Sigiriya</option>
-                                <option value="Trincomalee">Trincomalee</option>
-                                <option value="Yala">Yala</option>
-                                <option value="Anuradhapura">Anuradhapura</option>
-                                <option value="Polonnaruwa">Polonnaruwa</option>
-                                <option value="Jaffna">Jaffna</option>
-                                <option value="Dambulla">Dambulla</option>
-                                <option value="Negombo">Negombo</option>
-                            </select>
+                            <input type="text" id="drop" name="Drop Location"
+                                placeholder="Type drop-off city or location" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -294,25 +123,30 @@
                             <label for="vehicle">Vehicle Type</label>
                             <select id="vehicle" name="Vehicle Type" required>
                                 <option value="" disabled selected>Select Vehicle</option>
-                                <option value="Car">Car (1-3 pax)</option>
-                                <option value="Van">Van (4-9 pax)</option>
-                                <option value="Luxury">Luxury (1-3 pax)</option>
-                                <option value="Tuk Tuk">Tuk Tuk (1-2 pax)</option>
+                                <option value="Car">Car</option>
+                                <option value="Van">Van</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Tuk Tuk">Tuk Tuk</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="passengers">Passenger Count</label>
-                            <input type="number" id="passengers" name="Passenger Count" min="1" max="15" required
+                            <input type="number" id="passengers" name="Passenger Count" max="50" required
                                 placeholder="2">
                         </div>
                     </div>
                     <div class="form-group" style="margin-bottom: 2rem;">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="Phone Number Raw" pattern="^[0-9]{10}$" maxlength="10"
-                            required placeholder="7XXXXXXXX"
-                            title="Provide exactly a 10-digit phone number. Example: 729088087">
+                        <input type="tel" id="phone" name="Phone Number Raw" pattern="^[0-9+]{1,15}$" maxlength="15"
+                            required placeholder="Enter Phone Number"
+                            title="Provide up to a 15-digit phone number. Example: +94729088087">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Book Now</button>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="special-request">Special Request (Optional)</label>
+                        <textarea id="special-request" name="Special Request" rows="2"
+                            placeholder="Any special requirements? e.g., Baby seat, wheelchair access"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full wave-btn">Book Now</button>
                     <div id="booking-confirmation" class="hidden success-message">
                         <i class="fas fa-check-circle"></i> Booking request sent successfully! We will contact you soon.
                     </div>
@@ -321,7 +155,143 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- About Section -->
+    <section id="about" class="section bg-sand">
+        <div class="container about-grid reveal fade-left">
+            <div class="about-text">
+                <h2 class="section-title">Experience True Sri Lankan Hospitality</h2>
+                <p>Welcome to Bluewaves, your trusted travel partner in Sri Lanka. We offer personalized tours and
+                    reliable taxi services to ensure your journey is safe, comfortable, and unforgettable.</p>
+                <div class="stats-counter">
+                    <div class="stat-item">
+                        <div><span class="counter text-blue-btn" data-target="5750">0</span><span
+                                class="text-blue-btn">+</span></div>
+                        <p>Happy Tourists</p>
+                    </div>
+                    <div class="stat-item">
+                        <div><span class="counter text-blue-btn" data-target="85">0</span><span
+                                class="text-blue-btn">+</span></div>
+                        <p>Destinations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image reveal fade-right">
+                <img src="Aboutus.png" alt="About Us" class="rounded-img shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="section" style="background-color: #fdfaf7;">
+        <div class="container">
+            <div class="section-header text-center reveal fade-bottom" style="margin-bottom: 3rem;">
+                <h2 class="section-title" style="color: #2d3748; font-size: 2.5rem; margin-bottom: 1rem;">Popular Tour
+                    Packages</h2>
+                <p style="color: #718096; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.6;">
+                    Handpicked travel experiences covering Sri Lanka’s top destinations, perfect for families, couples,
+                    and solo travelers.</p>
+            </div>
+            <div class="swiper destinations-slider" style="padding: 2rem 3rem;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card reveal fade-bottom delay-1">
+                        <a href="sigiriya-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/960px-Sigiriya_%28141688197%29.jpeg"
+                                    alt="Sigiriya" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Sigiriya – Ancient</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-2">
+                        <a href="kandy-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg/960px-SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg"
+                                    alt="Kandy" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Kandy – Cultural</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-3">
+                        <a href="ella-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Nine_Arches_Bridge.jpg/960px-The_Nine_Arches_Bridge.jpg"
+                                    alt="Ella" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Ella – Scenic</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-1">
+                        <a href="galle-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/960px-Galle_Fort.jpg"
+                                    alt="Galle" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Galle – Heritage</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-2">
+                        <a href="yala-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yala_Beach.jpg/960px-Yala_Beach.jpg"
+                                    alt="Yala" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Yala – Wild</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-3">
+                        <a href="mirissa-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mirissa-Plage_%283%29.jpg/960px-Mirissa-Plage_%283%29.jpg"
+                                    alt="Mirissa" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Mirissa – Breezy</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide card reveal fade-bottom delay-1">
+                        <a href="colombo-city-tour.html" style="text-decoration: none;">
+                            <div class="card-img-wrapper">
+                                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colombo_Skyline_Jan_2022.jpg?width=900"
+                                    alt="Colombo City Tour" class="card-img">
+                            </div>
+                            <div class="card-content">
+                                <div class="package-card-header" style="margin-bottom: 0;">
+                                    <h3>Colombo – Urban</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next" style="color: #0ea5e9;"></div>
+                <div class="swiper-button-prev" style="color: #0ea5e9;"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="section bg-white" style="overflow: hidden; padding-bottom: 6rem;">
         <div class="container" style="max-width: 1200px;">
@@ -390,11 +360,34 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide gallery-card">
+                            <img src="Gallery_7.jpg" alt="Journey 7">
+                            <div class="gallery-overlay">
+                                <div class="overlay-text">
+                                    <h3>Sigiriya</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide gallery-card">
+                            <img src="Gallery_8.jpg" alt="Journey 8">
+                            <div class="gallery-overlay">
+                                <div class="overlay-text">
+                                    <h3>Mirissa</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="swiper-slide gallery-card">
+                            <img src="Gallery_9.jpg" alt="Journey 9">
+                            <div class="gallery-overlay">
+                                <div class="overlay-text">
+                                    <h3>Colombo</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Drag Cursor Element -->
-                <div class="drag-indicator">
-                    <i class="fas fa-chevron-left"></i> DRAG <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
@@ -403,115 +396,287 @@
     <!-- Testimonials Section -->
     <section class="section testimonials-section bg-white" id="testimonials">
         <div class="container">
-            <div class="testimonials-header">
+            <div class="testimonials-header" style="justify-content: center; text-align: center;">
                 <div>
                     <h2 class="section-title">What our travelers say after exploring<br>the world with us.</h2>
                 </div>
-                <div>
-                    <a href="#" class="btn btn-dark-pill">View more <i class="fas fa-arrow-right"></i></a>
-                </div>
             </div>
 
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i>
+            <div class="swiper testimonials-slider" style="padding: 2rem 1rem;">
+                <div class="swiper-wrapper" style="padding-bottom: 3rem;">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Excellent rent a car and tourism service with clean vehicles and great
+                            customer support. Very reliable and professional highly recommended!"</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Mohamed+Faizal+Anas&background=random&rounded=true"
+                                alt="Mohamed">
+                            <div class="reviewer-info">
+                                <h4>Mohamed Faizal Anas</h4>
+                                <p>Local Guide</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="review-text">An unforgettable experience! From the seamless airport pickup to the truly
-                        knowledgeable guides, everything exceeded our expectations.</p>
-                    <div class="reviewer">
-                        <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=random&rounded=true"
-                            alt="Sarah">
-                        <div class="reviewer-info">
-                            <h4>Sarah Jenkins</h4>
-                            <p>@sarah_j99</p>
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Very accommodating and helpful ! I highly recommend ! The cars are very
+                            comfortable and in great condition."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Delphine+Klc&background=random&rounded=true"
+                                alt="Delphine">
+                            <div class="reviewer-info">
+                                <h4>Delphine Klc</h4>
+                                <p>Tourist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Very good experience. Our driver arrived on time and was very
+                            professional throughout the entire journey."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Caroline+Brument&background=random&rounded=true"
+                                alt="Caroline">
+                            <div class="reviewer-info">
+                                <h4>Caroline Brument</h4>
+                                <p>Tourist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Good service and good prices! Very helpful. The communication from the
+                            team was excellent. Saved us a lot of time."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Felicia+Wallberg&background=random&rounded=true"
+                                alt="Felicia">
+                            <div class="reviewer-info">
+                                <h4>Felicia Wallberg</h4>
+                                <p>Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"One of the best travel agencies in town. Seamless service from airport
+                            pickup to drop off. Highly professional!"</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Kevin+Roberts&background=random&rounded=true"
+                                alt="Kevin">
+                            <div class="reviewer-info">
+                                <h4>Kevin Roberts</h4>
+                                <p>Tourist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Superb experience! The driver was on time, very polite and the car was
+                            spotless. I will definitely use Bluewaves again."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Emma+Thompson&background=random&rounded=true"
+                                alt="Emma">
+                            <div class="reviewer-info">
+                                <h4>Emma Thompson</h4>
+                                <p>Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Great experience with Bluewaves. Fast communication, easy booking, and
+                            perfect execution. The tour around Ella was magical."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Alejandro+Gomez&background=random&rounded=true"
+                                alt="Alejandro">
+                            <div class="reviewer-info">
+                                <h4>Alejandro Gomez</h4>
+                                <p>Tourist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 8 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Very genuine service. We booked a 5-day tour and everything was sorted
+                            perfectly. Hotels and transport were top-notch."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Maria+Silva&background=random&rounded=true"
+                                alt="Maria">
+                            <div class="reviewer-info">
+                                <h4>Maria Silva</h4>
+                                <p>Tourist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 9 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Such an amazing local company. They really understand what tourists
+                            need. I felt very safe traveling with them."</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=random&rounded=true"
+                                alt="Sarah">
+                            <div class="reviewer-info">
+                                <h4>Sarah Lee</h4>
+                                <p>Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 10 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
+                                class="fas fa-star text-gold"></i>
+                        </div>
+                        <p class="review-text">"Five stars! The best way to travel around Sri Lanka without any stress.
+                            The guides actually know the histories!"</p>
+                        <div class="reviewer">
+                            <img src="https://ui-avatars.com/api/?name=David+Chen&background=random&rounded=true"
+                                alt="David">
+                            <div class="reviewer-info">
+                                <h4>David Chen</h4>
+                                <p>Tourist</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i>
-                    </div>
-                    <p class="review-text">BlueWaves made our honeymoon magical. The stays were top-notch and our driver
-                        was so friendly and professional.</p>
-                    <div class="reviewer">
-                        <img src="https://ui-avatars.com/api/?name=Liam+O'Connor&background=random&rounded=true"
-                            alt="Liam">
-                        <div class="reviewer-info">
-                            <h4>Liam O'Connor</h4>
-                            <p>@liam_travels</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i>
-                    </div>
-                    <p class="review-text">We felt incredibly safe and well taken care of. The itinerary they planned
-                        around Yala and Ella was simply perfect!</p>
-                    <div class="reviewer">
-                        <img src="https://ui-avatars.com/api/?name=Elena+Mendez&background=random&rounded=true"
-                            alt="Elena">
-                        <div class="reviewer-info">
-                            <h4>Elena Mendez</h4>
-                            <p>@elena_mendez</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i><i class="fas fa-star text-gold"></i><i
-                            class="fas fa-star text-gold"></i>
-                    </div>
-                    <p class="review-text">Highly recommended! Traveling across Sri Lanka was so easy with their
-                        service. Best taxi and tour guide we could ask for.</p>
-                    <div class="reviewer">
-                        <img src="https://ui-avatars.com/api/?name=Kenji+Sato&background=random&rounded=true"
-                            alt="Kenji">
-                        <div class="reviewer-info">
-                            <h4>Kenji Sato</h4>
-                            <p>@kenji_explorer</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Pagination / Navigation (optional) -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
+    <!-- Explore Tours Modal -->
+    <div id="tourModal" class="modal-overlay hidden">
+        <div class="modal-content shadow-lg">
+            <span class="close-modal" onclick="closeTourModal()">&times;</span>
+            <h3 style="text-align: center; margin-bottom: 2rem; color: #1a365d; font-size: 1.8rem;">Book This Tour</h3>
+            <form id="explore-tours-form" class="taxi-form" action="https://formsubmit.co/imfaizalanas@gmail.com"
+                method="POST" onsubmit="submitTourModal(event)">
+                <input type="hidden" name="_cc" value="anasimani01@gmail.com">
+                <input type="hidden" name="_subject" value="New Explore Tour Booking!">
+                <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 250px;">
+                        <label for="modal-name"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                        <input type="text" id="modal-name" name="Name"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                            placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 250px;">
+                        <label for="modal-phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone
+                            Number</label>
+                        <input type="tel" id="modal-phone" name="Phone Number"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                            placeholder="Ex: +94729088087" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="modal-package" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Select
+                        Tour Package</label>
+                    <select id="modal-package" name="Tour Package"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                        <option value="" disabled selected>Choose a package...</option>
+                        <option value="Colombo City Tour">Colombo City Tour</option>
+                        <option value="Ella - Scenic">Ella - Scenic</option>
+                        <option value="Galle - Heritage">Galle - Heritage</option>
+                        <option value="Kandy - Cultural">Kandy - Cultural</option>
+                        <option value="Mirissa - Breezy">Mirissa - Breezy</option>
+                        <option value="Sigiriya - Ancient">Sigiriya - Ancient</option>
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Yala - Wild">Yala - Wild</option>
+                    </select>
+                </div>
+                <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="modal-date" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Start
+                            Date</label>
+                        <input type="date" id="modal-date" name="Date"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="modal-days" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">How
+                            Many Days</label>
+                        <input type="number" id="modal-days" name="Number of Days" min="1" max="30"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                            placeholder="Ex: 3" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label for="modal-request" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Special
+                        Request (Optional)</label>
+                    <textarea id="modal-request" name="Special Request" rows="2"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"
+                        placeholder="Any special requirements?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary wave-btn"
+                    style="width: 100%; padding: 1rem; border: none; border-radius: 30px; font-size: 1.1rem; cursor: pointer; background: #1a365d; color: #fff;">Book
+                    This Tour Now</button>
+            </form>
+            <div id="tour-modal-success" class="hidden wave-success">
+                <i class="fas fa-check-circle" style="color: #0eccaa;"></i> Thanks! Your tour request has been
+                submitted. We will contact you soon.
+            </div>
+        </div>
+    </div>
+
     <!-- Footer & Contact -->
     <footer id="contact" class="footer-modern">
-        <div class="footer-newsletter">
-            <h3>Get Updated The Latest Newsletter</h3>
-            <form class="footer-newsletter-form">
-                <input type="email" placeholder="Enter Email" required>
-                <button type="submit">Subscribe Now <i class="far fa-paper-plane"></i></button>
-            </form>
-        </div>
-
-        <div class="footer-main">
+        <div class="footer-main" style="padding-top: 2rem;">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="BlueWaves"
-                        style="height: 60px; filter: brightness(0.15) sepia(1) hue-rotate(180deg) saturate(3);">
+                    <img src="logo.png" alt="BlueWaves" style="height: 120px; filter: brightness(0) invert(1);">
                 </div>
                 <p style="max-width: 300px;">Your trusted travel partner for tours, sightseeing, and taxi bookings
                     across Sri Lanka. Discover the island with comfort, convenience, and unforgettable experiences.</p>
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1CCptfN8FA/" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.instagram.com/bluewavestoutism?igsh=czFna21mNm96cXQ1" target="_blank"><i
                             class="fab fa-instagram"></i></a>
@@ -525,7 +690,7 @@
                     <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                     <li><a href="#book-taxi"><i class="fas fa-chevron-right"></i> Tours</a></li>
                     <li><a href="#destinations"><i class="fas fa-chevron-right"></i> Destinations</a></li>
-                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Journey Highlights</a></li>
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
@@ -549,20 +714,11 @@
             </div>
 
             <div class="footer-widget">
-                <h4>Instagram Post</h4>
                 <div class="footer-instagram">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/960px-Sigiriya_%28141688197%29.jpeg"
-                        alt="Insta 1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg/960px-SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg"
-                        alt="Insta 2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Nine_Arches_Bridge.jpg/960px-The_Nine_Arches_Bridge.jpg"
-                        alt="Insta 3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/960px-Galle_Fort.jpg"
-                        alt="Insta 4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yala_Beach.jpg/960px-Yala_Beach.jpg"
-                        alt="Insta 5">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mirissa-Plage_%283%29.jpg/960px-Mirissa-Plage_%283%29.jpg"
-                        alt="Insta 6">
+                    <!-- Elfsight Instagram Widget Integration -->
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-8c381e5b-b5d1-4e46-81bf-65d1d603a1da" data-elfsight-app-lazy></div>
+                    <!-- Note for user: To connect your specific account 'bluewavestoutism', log into elfsight.com and create a free widget and replace the ID '8c381e5b-b5d1-4e46-81bf-65d1d603a1da' with your own. -->
                 </div>
             </div>
         </div>
@@ -595,25 +751,50 @@
                     delay: 4000,
                     disableOnInteraction: false,
                 },
+                navigation: {
+                    nextEl: ".destinations-slider .swiper-button-next",
+                    prevEl: ".destinations-slider .swiper-button-prev",
+                },
                 breakpoints: {
-                    320: { slidesPerView: 1, spaceBetween: 20, centeredSlides: false },
+                    320: { slidesPerView: "auto", spaceBetween: 20, centeredSlides: true },
                     768: { slidesPerView: 2, spaceBetween: 30, centeredSlides: false },
                     1024: { slidesPerView: 3, spaceBetween: 40, centeredSlides: true },
                 }
             });
 
             var gallerySwiper = new Swiper(".gallery-slider", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
                 slidesPerView: "auto",
+                spaceBetween: 30,
+                centeredSlides: true,
+                grabCursor: true,
                 loop: true,
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 50,
-                    depth: 150,
-                    modifier: 1,
-                    slideShadows: false,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: { slidesPerView: "auto", spaceBetween: 20, centeredSlides: true },
+                    768: { slidesPerView: 2, spaceBetween: 30, centeredSlides: false },
+                    1024: { slidesPerView: 3, spaceBetween: 40, centeredSlides: true },
+                }
+            });
+
+            var testimonialsSwiper = new Swiper(".testimonials-slider", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                grabCursor: true,
+                loop: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".testimonials-slider .swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 40 },
                 }
             });
         });

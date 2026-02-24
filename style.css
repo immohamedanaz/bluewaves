@@ -72,7 +72,7 @@ img {
 }
 
 .bg-light-blue {
-    background-color: #e8f5e9;
+    background-color: #fdfaf7;
 }
 
 /* Typography */
@@ -96,17 +96,22 @@ h6 {
     cursor: pointer;
     border: none;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
-    background-color: var(--color-gold);
-    color: var(--color-green-dark);
+    background: linear-gradient(135deg, #023e8a, #0077b6, #00b4d8);
+    color: var(--color-white);
+    background-size: 200% auto;
+    transition: 0.5s;
 }
 
 .btn-primary:hover {
-    background-color: #e5a400;
+    background-position: right center;
+    color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.4);
 }
 
 .btn-outline {
@@ -117,7 +122,7 @@ h6 {
 
 .btn-outline:hover {
     background-color: var(--color-white);
-    color: var(--color-green-dark);
+    color: #0077b6;
 }
 
 .btn-large {
@@ -163,10 +168,12 @@ h6 {
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1rem 0;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -248,10 +255,10 @@ h6 {
 
 /* Hero Section */
 .hero {
-    height: calc(100vh - 40px);
-    max-width: 1600px;
-    margin: 20px auto;
-    border-radius: 40px;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
     background-image: url('Main_pic.png');
     background-size: cover;
     background-position: center;
@@ -369,10 +376,12 @@ h6 {
     font-family: var(--font-secondary);
 }
 
-.stat-item span {
+.stat-item span,
+.text-blue-btn {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-gold);
+    color: #0077b6;
+    /* Match the prominent blue color from the button hover */
 }
 
 .about-image {
@@ -539,7 +548,8 @@ h6 {
 }
 
 .taxi-form input,
-.taxi-form select {
+.taxi-form select,
+.taxi-form textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
@@ -550,7 +560,8 @@ h6 {
 }
 
 .taxi-form input:focus,
-.taxi-form select:focus {
+.taxi-form select:focus,
+.taxi-form textarea:focus {
     outline: none;
     border-color: var(--color-blue);
     box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.2);
@@ -728,6 +739,13 @@ h6 {
     background: #f4f5f7;
     padding: 2rem;
     border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card .review-text {
+    flex-grow: 1;
 }
 
 .testimonial-card .stars {
@@ -768,8 +786,8 @@ h6 {
 
 /* Modern Footer */
 .footer-modern {
-    background-color: #fff;
-    color: #4a5568;
+    background-color: #023e8a;
+    color: #ffffff;
     padding-top: 3rem;
     font-family: var(--font-primary);
 }
@@ -781,13 +799,13 @@ h6 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 4rem;
 }
 
 .footer-newsletter h3 {
     font-size: 2.2rem;
-    color: #1a365d;
+    color: #ffffff;
     max-width: 400px;
     line-height: 1.2;
 }
@@ -796,8 +814,8 @@ h6 {
     display: flex;
     gap: 1rem;
     align-items: center;
-    background: #fff;
-    border: 1px solid #cbd5e0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
     padding: 0.5rem;
     width: 450px;
@@ -810,11 +828,16 @@ h6 {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     background: transparent;
+    color: #ffffff;
+}
+
+.footer-newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-newsletter-form button {
-    background: #1a365d;
-    color: #fff;
+    background: #ffffff;
+    color: #023e8a;
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 30px;
@@ -854,8 +877,8 @@ h6 {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: #e6f7ff;
-    color: #0ea5e9;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -864,13 +887,13 @@ h6 {
 }
 
 .footer-socials a:hover {
-    background: #0ea5e9;
-    color: #fff;
+    background: #ffffff;
+    color: #023e8a;
 }
 
 .footer-widget h4 {
     font-size: 1.2rem;
-    color: #1a365d;
+    color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
@@ -885,7 +908,7 @@ h6 {
 }
 
 .footer-links a {
-    color: #718096;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-size: 0.95rem;
     display: flex;
@@ -899,7 +922,7 @@ h6 {
 }
 
 .footer-links a:hover {
-    color: #1a365d;
+    color: #ffffff;
 }
 
 .footer-address {
@@ -914,7 +937,7 @@ h6 {
     gap: 1rem;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    color: #718096;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
 }
 
@@ -922,8 +945,8 @@ h6 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #e6f7ff;
-    color: #0ea5e9;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -999,8 +1022,14 @@ h6 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer-dark-top {
+    .footer-main {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-newsletter {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
     }
 }
 
@@ -1009,14 +1038,24 @@ h6 {
         grid-template-columns: 1fr;
     }
 
-    .footer-dark-top {
+    .footer-main {
         grid-template-columns: 1fr;
     }
 
-    .footer-dark-bottom {
+    .footer-bottom-content {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+
+    .footer-newsletter-form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-newsletter-form button {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -1029,11 +1068,11 @@ h6 {
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
+    font-size: 45px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1133,5 +1172,115 @@ h6 {
 
     .header-actions .btn {
         display: none;
+    }
+
+    .destinations-slider .swiper-slide {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+.btn-hero {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+}
+
+/* Button Ripple & Wave Effect */
+.wave-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Ripple & Wave Effect */
+.btn .ripple,
+.wave-btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    position: relative;
+    max-width: 650px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: translateY(-50px);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: #4a5568;
+}
+
+.close-modal:hover {
+    color: #1a365d;
+}
+
+/* Success Wave Text Effect */
+.wave-success {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a365d;
+    text-align: center;
+    margin-top: 2rem;
+    background: linear-gradient(90deg, #0ea5e9, #1a365d, #0eccaa, #0ea5e9);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-wave 3s infinite linear;
+}
+
+@keyframes text-wave {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }

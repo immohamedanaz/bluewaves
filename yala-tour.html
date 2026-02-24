@@ -61,11 +61,11 @@
                 <a href="index.html#about">About</a>
                 <a href="index.html#book-taxi">Tours</a>
                 <a href="index.html#destinations">Destinations</a>
-                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#gallery">Journey Highlights</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
             <div class="header-actions">
-                <a href="index.html#book-taxi" class="btn btn-primary sticky-book-btn">Book Taxi</a>
+                <a href="index.html#book-taxi" class="btn btn-primary sticky-book-btn">Book a Taxi</a>
             </div>
         </div>
     </header>
@@ -133,35 +133,89 @@
                 </li>
             </ul>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="index.html#book-taxi" class="btn btn-primary btn-large">Book This Tour Now</a>
+            <div class="tour-booking-container shadow-lg"
+                style="max-width: 650px; margin: 4rem auto; background: #fff; padding: 3rem; border-radius: 20px;">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: #1a365d; font-size: 1.8rem;">Book This Tour
+                </h3>
+                <form class="taxi-form" action="https://formsubmit.co/imfaizalanas@gmail.com" method="POST">
+                    <input type="hidden" name="_cc" value="anasimani01@gmail.com">
+                    <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="name"
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                            <input type="text" id="name" name="Name"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                                placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="Phone Number"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                                placeholder="Ex: +94729088087" required>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="package" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Select
+                            Tour Package</label>
+                        <select id="package" name="Tour Package"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;" required>
+                            <option value="" disabled selected>Choose a package...</option>
+                            <option value="Colombo City Tour">Colombo City Tour</option>
+                            <option value="Ella - Scenic">Ella - Scenic</option>
+                            <option value="Galle - Heritage">Galle - Heritage</option>
+                            <option value="Kandy - Cultural">Kandy - Cultural</option>
+                            <option value="Mirissa - Breezy">Mirissa - Breezy</option>
+                            <option value="Sigiriya - Ancient">Sigiriya - Ancient</option>
+                            <option value="Trincomalee">Trincomalee</option>
+                            <option value="Yala - Wild">Yala - Wild</option>
+                        </select>
+                    </div>
+                    <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="date" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Start
+                                Date</label>
+                            <input type="date" id="date" name="Date"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                                required>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="days" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">How Many
+                                Days</label>
+                            <input type="number" id="days" name="Number of Days" min="1" max="30"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px;"
+                                placeholder="Ex: 3" required>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="request" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Special
+                            Request (Optional)</label>
+                        <textarea id="request" name="Special Request" rows="2"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"
+                            placeholder="Any special requirements?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; padding: 1rem; border: none; border-radius: 30px; font-size: 1.1rem; cursor: pointer; background: #1a365d; color: #fff;">Book
+                        This Tour Now</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact" class="footer-modern">
-        <div class="footer-newsletter">
-            <h3>Get Updated The Latest Newsletter</h3>
-            <form class="footer-newsletter-form">
-                <input type="email" placeholder="Enter Email" required>
-                <button type="submit">Subscribe Now <i class="far fa-paper-plane"></i></button>
-            </form>
-        </div>
+
 
         <div class="footer-main">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="BlueWaves"
-                        style="height: 60px; filter: brightness(0.15) sepia(1) hue-rotate(180deg) saturate(3);">
+                    <img src="logo.png" alt="BlueWaves" style="height: 120px; filter: brightness(0) invert(1);">
                 </div>
                 <p style="max-width: 300px;">Your trusted travel partner for tours, sightseeing, and taxi bookings
                     across Sri Lanka. Discover the island with comfort, convenience, and unforgettable experiences.</p>
                 <div class="footer-socials">
                     <a href="https://www.facebook.com/share/1CCptfN8FA/" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.instagram.com/bluewavestoutism?igsh=czFna21mNm96cXQ1" target="_blank"><i
                             class="fab fa-instagram"></i></a>
@@ -175,7 +229,7 @@
                     <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                     <li><a href="#book-taxi"><i class="fas fa-chevron-right"></i> Tours</a></li>
                     <li><a href="#destinations"><i class="fas fa-chevron-right"></i> Destinations</a></li>
-                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Journey Highlights</a></li>
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
@@ -199,20 +253,11 @@
             </div>
 
             <div class="footer-widget">
-                <h4>Instagram Post</h4>
                 <div class="footer-instagram">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/960px-Sigiriya_%28141688197%29.jpeg"
-                        alt="Insta 1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg/960px-SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg"
-                        alt="Insta 2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Nine_Arches_Bridge.jpg/960px-The_Nine_Arches_Bridge.jpg"
-                        alt="Insta 3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/960px-Galle_Fort.jpg"
-                        alt="Insta 4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yala_Beach.jpg/960px-Yala_Beach.jpg"
-                        alt="Insta 5">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mirissa-Plage_%283%29.jpg/960px-Mirissa-Plage_%283%29.jpg"
-                        alt="Insta 6">
+                    <!-- Elfsight Instagram Widget Integration -->
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-8c381e5b-b5d1-4e46-81bf-65d1d603a1da" data-elfsight-app-lazy></div>
+                    <!-- Note for user: To connect your specific account 'bluewavestoutism', log into elfsight.com and create a free widget and replace the ID '8c381e5b-b5d1-4e46-81bf-65d1d603a1da' with your own. -->
                 </div>
             </div>
         </div>
@@ -228,4 +273,3 @@
 </body>
 
 </html>
-
