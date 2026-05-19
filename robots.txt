@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or temporary helper scripts
+Disallow: /fix_index_seo.ps1
+Disallow: /fix_all_pages_seo.ps1
+Disallow: /update_seo.ps1
+Disallow: /update_seo.js
+
+# Sitemap location
+Sitemap: https://www.bluewaves.lk/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 10
