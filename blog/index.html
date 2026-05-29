@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Travel Blog | Tour Guides & Travel Tips | Blue Waves Tours</title>
+    <meta name="description" content="Discover Sri Lanka with the Blue Waves Tours Travel Blog. Read expert guides, itineraries, travel tips, beach guides, and safari recommendations for Sri Lanka.">
+    <meta name="keywords" content="Sri Lanka travel blog, Sri Lanka travel guide, best places to visit Sri Lanka, Sri Lanka tourism, Sri Lanka blog, travel tips Sri Lanka">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Blue Waves Tours">
+    <link rel="canonical" href="https://www.bluewaves.lk/blog/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bluewaves.lk/blog/">
+    <meta property="og:title" content="Sri Lanka Travel Blog | Blue Waves Tours">
+    <meta property="og:description" content="Read expert guides, travel tips, and destination highlights from the local travel experts at Blue Waves Tours.">
+    <meta property="og:image" content="https://www.bluewaves.lk/Main_pic.png">
+    <meta property="og:site_name" content="Blue Waves Tours">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sri Lanka Travel Blog | Blue Waves Tours">
+    <meta name="twitter:description" content="Expert guides and travel tips from Blue Waves Tours to help you plan your dream holiday in Sri Lanka.">
+    <meta name="twitter:image" content="https://www.bluewaves.lk/Main_pic.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blue Waves Tours Travel Blog",
+      "url": "https://www.bluewaves.lk/blog/",
+      "description": "Expert travel guides, tips, and articles about exploring Sri Lanka.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Blue Waves Tours",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bluewaves.lk/logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bluewaves.lk/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.bluewaves.lk/blog/" }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700&display=swap" rel="stylesheet">
+    <style>
+        .blog-hero { padding: 9rem 0 5rem; background: linear-gradient(135deg, #0b2e59 0%, #1a5276 100%); color: #fff; text-align: center; }
+        .blog-body { max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .blog-posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 2rem; }
+        .blog-post-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eaeaea; }
+        .blog-post-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); }
+        .post-card-img-wrapper { height: 220px; overflow: hidden; }
+        .post-card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .blog-post-card:hover .post-card-img { transform: scale(1.05); }
+        .post-card-content { padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .post-meta { font-size: 0.85rem; color: #718096; margin-bottom: 0.8rem; display: flex; gap: 1rem; }
+        .post-card-title { font-family: var(--font-secondary); font-size: 1.4rem; color: #0b2e59; margin-bottom: 1rem; line-height: 1.3; }
+        .post-card-excerpt { font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+        .read-more-link { font-weight: 600; color: #0ea5e9; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .read-more-link:hover { color: #003049; }
+        .read-more-link i { transition: transform 0.3s; }
+        .read-more-link:hover i { transform: translateX(4px); }
+        .blog-cta { background: #0b2e59; color: #fff; padding: 3rem; border-radius: 16px; text-align: center; margin: 4rem 0 2rem; }
+        .blog-cta h3 { color: #f0c040; margin-bottom: 1rem; font-size: 1.6rem; font-family: var(--font-secondary); }
+        .blog-cta p { max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.05rem; opacity: 0.9; }
+        .blog-cta a { display: inline-block; background: #f0c040; color: #0b2e59; padding: 0.9rem 2.2rem; border-radius: 30px; font-weight: 700; text-decoration: none; transition: transform 0.3s; }
+        .blog-cta a:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4); }
+        .breadcrumb { background: rgba(255,255,255,0.1); padding: 0.6rem 1.2rem; border-radius: 20px; display: inline-block; margin-bottom: 2rem; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+        .breadcrumb span { color: rgba(255,255,255,0.5); margin: 0 0.4rem; }
+    </style>
+</head>
+<body>
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="../index.html#home" class="logo"><img src="../logo.png" alt="Blue Waves Tours Logo" class="brand-logo"></a>
+            <nav class="nav-links">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#book-taxi">Tours</a>
+                <a href="../index.html#destinations">Destinations</a>
+                <a href="index.html">Blog</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../index.html#book-taxi" class="btn btn-primary sticky-book-btn">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="#">Blog</a></div>
+            <h1 style="font-size:2.8rem;margin-bottom:1rem;font-family:'Playfair Display',serif;">Blue Waves Travel Blog</h1>
+            <p style="font-size:1.15rem;opacity:0.85;max-width:700px;margin:0 auto;">Expert guides, travel itineraries, and destination highlights to help you plan your dream holiday in Sri Lanka.</p>
+        </div>
+    </section>
+
+    <div class="blog-body">
+        <div class="blog-posts-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-post-card">
+                <div class="post-card-img-wrapper">
+                    <img src="../Main_pic.png" alt="Best Places to Visit in Sri Lanka 2026" class="post-card-img" loading="lazy">
+                </div>
+                <div class="post-card-content">
+                    <div class="post-meta">
+                        <span><i class="fas fa-calendar-alt"></i> May 2026</span>
+                        <span><i class="fas fa-user"></i> By Blue Waves</span>
+                    </div>
+                    <h2 class="post-card-title"><a href="best-places-to-visit-sri-lanka.html" style="color: inherit; text-decoration: none;">Best Places to Visit in Sri Lanka 2026</a></h2>
+                    <p class="post-card-excerpt">A comprehensive travel guide to Sri Lanka's top tourist destinations — including Sigiriya, Kandy, Ella, Galle, Mirissa, Yala, and more.</p>
+                    <a href="best-places-to-visit-sri-lanka.html" class="read-more-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post-card">
+                <div class="post-card-img-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mirissa-Plage_%283%29.jpg/960px-Mirissa-Plage_%283%29.jpg" alt="Top Beaches in Sri Lanka 2026" class="post-card-img" loading="lazy">
+                </div>
+                <div class="post-card-content">
+                    <div class="post-meta">
+                        <span><i class="fas fa-calendar-alt"></i> May 2026</span>
+                        <span><i class="fas fa-user"></i> By Blue Waves</span>
+                    </div>
+                    <h2 class="post-card-title"><a href="top-beaches-sri-lanka.html" style="color: inherit; text-decoration: none;">Top Beaches in Sri Lanka 2026</a></h2>
+                    <p class="post-card-excerpt">Explore the absolute best beaches in Sri Lanka for your 2026 holiday, from the whale-watching shores of Mirissa to the surf breaks of Arugam Bay and pristine Trincomalee.</p>
+                    <a href="top-beaches-sri-lanka.html" class="read-more-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+
+        <div class="blog-cta">
+            <h3>Ready to Explore Sri Lanka?</h3>
+            <p>Blue Waves Tours offers private chauffeur services, customized holiday packages, and airport transfers to every destination. Let us handle the driving while you make memories.</p>
+            <a href="../index.html#book-taxi">Book Your Sri Lanka Tour</a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/94758088087" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <footer id="contact" class="footer-modern">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo"><img src="../logo.png" alt="Blue Waves Tours" style="height:100px;filter:brightness(0) invert(1);"></div>
+                <p style="max-width:300px;">Your trusted travel partner for tours, sightseeing, beach holidays, and taxi bookings across Sri Lanka.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/share/1CCptfN8FA/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94758088087" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/bluewavestoutism" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="../airport-transfer-sri-lanka.html"><i class="fas fa-chevron-right"></i> Airport Transfers</a></li>
+                    <li><a href="../private-driver-sri-lanka.html"><i class="fas fa-chevron-right"></i> Private Driver</a></li>
+                    <li><a href="../index.html#destinations"><i class="fas fa-chevron-right"></i> Tours</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h4>Contact</h4>
+                <ul class="footer-address">
+                    <li><div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div><div><span>+94 75 808 8087</span></div></li>
+                    <li><div class="icon-wrapper"><i class="fas fa-map-marker-alt"></i></div><div><span>24/4 Mattawa Road, Warakamura, Ukuwela</span></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="footer-bottom-content"><p>Copyright 2026 Bluewaves Travel & Tourism. All Rights Reserved.</p></div></div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
